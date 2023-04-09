@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europa Free</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Freedom</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Main Info" onclick="slowScroll('#main')">Main Info</a>
+
+            <a href="#" title="FAQ" onclick="slowScroll('#main')">FAQ</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Europa liberă</h1>
+        <h3>arată că ești cointeresat de viitorul țării.</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Cum să atragi </h2>
+            <span>oamenii?</span>
+        </div>
+        <div class="text">
+            <span>Nu trebuie să-i atragi. Oamenilor trebuie să li se arate că opinia fiecăruia contează. Trebuie să înțeleagă că sunt valoroși și importanți, la fel ca și ceilalți!</span>
+        </div>
+        
+    </div>
+    
+    <div id="overview">
+        <h2>Fii cu noi</h2>
+        <h4>Cu noi totul este mai ușor.</h4>
+
+        <div class="img">
+            <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+             <span>Votează</span>
+        </div>
+        <div class="img">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="">
+             <span>Fă-ți alegerea</span>
+        </div>
+        <div class="img">
+            <img src="Untitled.png" alt="">
+             <span>Nu sta deoparte</span>
+        </div>
+        <div class="img">
+            <img src="Untitled (1).png" alt="">
+             <span>Veți schimba lumea aceasta!</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <h5 style="text-align: center;">Feedback</h5>
+        <form id="form_input">
+          <label for="name">Name <span>*</span></label><br>
+          <input type="text" placeholder="Your Name" name="name" id="name" required><br>
+          <label for="email">Your Email <span>*</span></label><br>
+          <input type="email" placeholder="Email" name="email" id="email" required><br>
+          <label for="message">Message <span>*</span></label><br>
+          <textarea placeholder="Your Message" name="message" id="message" required></textarea><br>
+          <input type="submit" value="Go" class="btn">
+        </form>
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html,body').animate({
+             scrollTop: $(id).offset().top
+            },500)
+        }
+
+        $(document).on("scroll",function (){
+            if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+            else
+            $("header").attr("class","fixed");
+           });
+    </script>
+</body>
+</html>
